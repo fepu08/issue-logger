@@ -3,7 +3,7 @@ import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-import Searchbar from './components/layout/Searchbar';
+import SearchBar from './components/layout/SearchBar';
 import Logs from './components/logs/Logs';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <Searchbar />
+      <SearchBar />
       <div className='container'>
         <Logs />
       </div>
