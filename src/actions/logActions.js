@@ -1,4 +1,10 @@
-import { GET_LOGS, ADD_LOG, SET_LOADING, LOGS_ERROR } from './types';
+import {
+  GET_LOGS,
+  ADD_LOG,
+  DELETE_LOG,
+  SET_LOADING,
+  LOGS_ERROR
+} from './types';
 
 // export const getLogs = () => {
 //  // redux thunk allows to return func directly
@@ -13,8 +19,8 @@ import { GET_LOGS, ADD_LOG, SET_LOADING, LOGS_ERROR } from './types';
 //   };
 // };
 
-//Get Logs from server
 // same as above
+//Get Logs from server
 export const getLogs = () => async (dispatch) => {
   try {
     setLoading();
@@ -47,6 +53,27 @@ export const addLog = (log) => async (dispatch) => {
     dispatch({
       type: ADD_LOG,
       payload: data
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: err.response.data
+    });
+  }
+};
+
+//Delete Log from server
+export const deleteLog = (id) => async (dispatch) => {
+  try {
+    setLoading();
+    const res = await fetch(`/logs/${id}`, {
+      method: 'DELETE'
+    });
+
+    const data = await res.json();
+    dispatch({
+      type: DELETE_LOG,
+      payload: id
     });
   } catch (err) {
     dispatch({
