@@ -29,7 +29,7 @@ export const getLogs = () => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch(
-      'http://https://my-json-server.typicode.com/fepu08/issue-logger/logs'
+      'https://my-json-server.typicode.com/fepu08/issue-logger/logs'
     );
     const data = await res.json();
     dispatch({
@@ -49,7 +49,7 @@ export const addLog = (log) => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch(
-      'http://https://my-json-server.typicode.com/fepu08/issue-logger/logs',
+      'https://my-json-server.typicode.com/fepu08/issue-logger/logs',
       {
         method: 'POST',
         body: JSON.stringify(log),
@@ -76,7 +76,7 @@ export const deleteLog = (id) => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch(
-      `http://https://my-json-server.typicode.com/fepu08/issue-logger/logs/${id}`,
+      `http://my-json-server.typicode.com/fepu08/issue-logger/logs/${id}`,
       {
         method: 'DELETE'
       }
@@ -100,7 +100,7 @@ export const updateLog = (log) => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch(
-      `http://https://my-json-server.typicode.com/fepu08/issue-logger/logs/${log.id}`,
+      `https://my-json-server.typicode.com/fepu08/issue-logger/logs/${log.id}`,
       {
         method: 'PUT',
         body: JSON.stringify(log),
@@ -128,7 +128,7 @@ export const searchLogs = (text) => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch(
-      `https://github.com/fepu08/issue-logger/blob/main/db.json/logs?q=${text}`
+      `https://my-json-server.typicode.com/fepu08/issue-logger/logs?q=${text}`
     );
     const data = await res.json();
     dispatch({
