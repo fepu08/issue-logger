@@ -3,6 +3,5 @@ It's a simple React application to track IT tasks and issues. Uses JSON-Server a
 
 ### Key features
 * Redux
-* Functional components
-* Hooks
+* Functional components with Hooks
 * Materialize framework
