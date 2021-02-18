@@ -76,7 +76,7 @@ export const deleteLog = (id) => async (dispatch) => {
   try {
     setLoading();
     await fetch(
-      `http://my-json-server.typicode.com/fepu08/issue-logger/logs/${id}`,
+      `https://my-json-server.typicode.com/fepu08/issue-logger/logs/${id}`,
       {
         method: 'DELETE'
       }
