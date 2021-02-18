@@ -11,7 +11,7 @@ export const getTechs = () => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch(
-      'https://github.com/fepu08/issue-logger/blob/main/db.json/techs'
+      'http://https://my-json-server.typicode.com/fepu08/issue-logger/techs'
     );
     const data = await res.json();
     dispatch({
@@ -31,7 +31,7 @@ export const addTech = (tech) => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch(
-      'https://github.com/fepu08/issue-logger/blob/main/db.json/techs',
+      'http://https://my-json-server.typicode.com/fepu08/issue-logger/techs',
       {
         method: 'POST',
         body: JSON.stringify(tech),
@@ -58,7 +58,7 @@ export const deleteTech = (id) => async (dispatch) => {
     setLoading();
 
     await fetch(
-      `https://github.com/fepu08/issue-logger/blob/main/db.json/techs/${id}`,
+      `http://https://my-json-server.typicode.com/fepu08/issue-logger/techs${id}`,
       {
         method: 'DELETE'
       }
