@@ -28,7 +28,9 @@ import {
 export const getLogs = () => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch('/logs');
+    const res = await fetch(
+      'https://github.com/fepu08/issue-logger/blob/main/db.json/logs'
+    );
     const data = await res.json();
     dispatch({
       type: GET_LOGS,
@@ -46,13 +48,16 @@ export const getLogs = () => async (dispatch) => {
 export const addLog = (log) => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch('/logs', {
-      method: 'POST',
-      body: JSON.stringify(log),
-      headers: {
-        'Content-Type': 'application/json'
+    const res = await fetch(
+      'https://github.com/fepu08/issue-logger/blob/main/db.json/logs',
+      {
+        method: 'POST',
+        body: JSON.stringify(log),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       }
-    });
+    );
     const data = await res.json();
     dispatch({
       type: ADD_LOG,
@@ -70,9 +75,12 @@ export const addLog = (log) => async (dispatch) => {
 export const deleteLog = (id) => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch(`/logs/${id}`, {
-      method: 'DELETE'
-    });
+    const res = await fetch(
+      `https://github.com/fepu08/issue-logger/blob/main/db.json/logs/${id}`,
+      {
+        method: 'DELETE'
+      }
+    );
 
     const data = await res.json();
     dispatch({
@@ -91,13 +99,16 @@ export const deleteLog = (id) => async (dispatch) => {
 export const updateLog = (log) => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch(`/logs/${log.id}`, {
-      method: 'PUT',
-      body: JSON.stringify(log),
-      headers: {
-        'Content-Type': 'application/json'
+    const res = await fetch(
+      `https://github.com/fepu08/issue-logger/blob/main/db.json/logs/${log.id}`,
+      {
+        method: 'PUT',
+        body: JSON.stringify(log),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       }
-    });
+    );
 
     const data = await res.json();
     dispatch({
@@ -116,7 +127,9 @@ export const updateLog = (log) => async (dispatch) => {
 export const searchLogs = (text) => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch(`/logs?q=${text}`);
+    const res = await fetch(
+      `https://github.com/fepu08/issue-logger/blob/main/db.json/logs?q=${text}`
+    );
     const data = await res.json();
     dispatch({
       type: SEARCH_LOGS,

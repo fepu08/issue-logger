@@ -10,7 +10,9 @@ import {
 export const getTechs = () => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch('/techs');
+    const res = await fetch(
+      'https://github.com/fepu08/issue-logger/blob/main/db.json/techs'
+    );
     const data = await res.json();
     dispatch({
       type: GET_TECHS,
@@ -28,13 +30,16 @@ export const getTechs = () => async (dispatch) => {
 export const addTech = (tech) => async (dispatch) => {
   try {
     setLoading();
-    const res = await fetch('/techs', {
-      method: 'POST',
-      body: JSON.stringify(tech),
-      headers: {
-        'Content-Type': 'application/json'
+    const res = await fetch(
+      'https://github.com/fepu08/issue-logger/blob/main/db.json/techs',
+      {
+        method: 'POST',
+        body: JSON.stringify(tech),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       }
-    });
+    );
     const data = await res.json();
     dispatch({
       type: ADD_TECH,
@@ -43,6 +48,29 @@ export const addTech = (tech) => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: TECH_ERROR,
+      payload: err.response.statusText
+    });
+  }
+};
+
+export const deleteTech = (id) => async (dispatch) => {
+  try {
+    setLoading();
+
+    await fetch(
+      `https://github.com/fepu08/issue-logger/blob/main/db.json/techs/${id}`,
+      {
+        method: 'DELETE'
+      }
+    );
+
+    dispatch({
+      type: DELETE_TECH,
+      payload: id
+    });
+  } catch (err) {
+    dispatch({
+      type: TECHS_ERROR,
       payload: err.response.statusText
     });
   }
