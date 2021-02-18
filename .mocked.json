@@ -6,10 +6,9 @@
     "tech": "string",
     "date": "date"
   },
-  "Tech": [
-    {
-      "id": "int",
-      "firstName": "string",
-      "lastName": "string"
-    }
+  "Tech": {
+    "id": "int",
+    "firstName": "string",
+    "lastName": "string"
+  }
 }
