@@ -70,7 +70,7 @@ export const deleteTech = (id) => async (dispatch) => {
     });
   } catch (err) {
     dispatch({
-      type: TECHS_ERROR,
+      type: TECH_ERROR,
       payload: err.response.statusText
     });
   }

@@ -1,4 +1,10 @@
-import { ADD_TECH, GET_TECHS, SET_LOADING, TECH_ERROR } from '../actions/types';
+import {
+  ADD_TECH,
+  GET_TECHS,
+  SET_LOADING,
+  DELETE_TECH,
+  TECH_ERROR
+} from '../actions/types';
 
 const initialState = {
   techs: null,
