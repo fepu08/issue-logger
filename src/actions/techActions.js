@@ -58,7 +58,7 @@ export const deleteTech = (id) => async (dispatch) => {
     setLoading();
 
     await fetch(
-      `https://my-json-server.typicode.com/fepu08/issue-logger/techs${id}`,
+      `https://my-json-server.typicode.com/fepu08/issue-logger/techs/${id}`,
       {
         method: 'DELETE'
       }
