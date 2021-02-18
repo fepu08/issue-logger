@@ -2,31 +2,24 @@
   "logs": [
     {
       "id": 1,
-      "message": "Changed network card in server 007",
+      "message": "network card does not work in server 007",
       "attention": true,
-      "tech": "Sam Smith",
+      "tech": "John Doe",
+      "date": "2021-02-17T21:06:38.387Z"
+    },
+    {
+      "id": 2,
+      "message": "Changed network card in server 007",
+      "attention": false,
+      "tech": "Amanda Williams",
       "date": "2021-02-17T21:06:38.387Z"
     },
     {
       "id": 3,
-      "message": "1122 wireless down",
+      "message": "wireless down at Building C",
       "attention": true,
       "date": "2019-05-31T15:46:48.690Z",
-      "tech": "Sara Wilson"
-    },
-    {
-      "id": 4,
-      "message": "Changed monitor at workstation 012",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2021-02-17T21:18:59.310Z"
-    },
-    {
-      "message": "Fixed hard drive on workstation 011",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2021-02-17T20:46:45.301Z",
-      "id": 5
+      "tech": "Ted Toddler"
     }
   ],
   "techs": [
@@ -37,28 +30,13 @@
     },
     {
       "id": 2,
-      "firstName": "Sam",
-      "lastName": "Smith"
+      "firstName": "Ted",
+      "lastName": "Toddler"
     },
     {
       "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
-    },
-    {
       "firstName": "Amanda",
-      "lastName": "Williams",
-      "id": 4
-    },
-    {
-      "firstName": "Gregor",
-      "lastName": "Gregov",
-      "id": 5
-    },
-    {
-      "firstName": "John",
-      "lastName": "Johnson",
-      "id": 6
+      "lastName": "Williams"
     }
   ]
 }
