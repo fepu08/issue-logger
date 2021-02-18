@@ -1,0 +1,15 @@
+{
+  "Log": {
+    "id": "int",
+    "message": "string",
+    "attention": "boolean",
+    "tech": "string",
+    "date": "date"
+  },
+  "Tech": [
+    {
+      "id": "int",
+      "firstName": "string",
+      "lastName": "string"
+    }
+}
